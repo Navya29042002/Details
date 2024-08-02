@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details</title>
+    <script>
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function displayData() {
+            var name = getQueryParam('name');
+            var mobile = getQueryParam('mobile');
+            var address = getQueryParam('address');
+
+            document.getElementById('name').textContent = name;
+            document.getElementById('mobile').textContent = mobile;
+            document.getElementById('address').textContent = address;
+        }
+
+        window.onload = displayData;
+    </script>
+</head>
+<body>
+    
+    <p><strong>Name: K Rakesh Kumar</strong> <span id="name"></span></p>
+    <p><strong>RRB Prelims Premium Subscription</strong> <span id="mobile"></span></p>
+    <p><strong>Amount: 1500</strong> <span id="address"></span></p>
+    <p><strong>Mobile No: 9502131034</strong> <span id="address"></span></p>
+</body>
+</html>
